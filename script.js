@@ -5,7 +5,8 @@ function volume_sphere() {
 	if(isNaN(radius) || radius < 0){
 		volume.value = "NaN";
 	}else{
-		volume.value = ((4/3) * Math.PI * Math.pow(radius,3)); 
+		var result = ((4/3) * Math.PI * Math.pow(radius,3)); 
+		volume.value = Math.round(result * 10000) / 10000;
 	}
 	return false;
 } 
